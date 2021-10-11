@@ -219,6 +219,7 @@ button:hover {
 }
 
 
+/* Starter code for custom radio button obtained from https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
 /* The container */
 .container {
   display: inline-block;
@@ -250,13 +251,12 @@ button:hover {
   background-color: #eee;
 }
 
-/* On mouse-over, add a grey background color */
+/* On mouse-over, darken element */
 .container:hover input ~ .checkmark {
   /*background-color: #ccc;*/
   filter: brightness(0.5);
 }
 
-/* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
 }
 

@@ -13,7 +13,7 @@ html, body, footer {
 header {
   background-color: white;
   color: black;
-  height: 130px;
+  height: auto;
 }
 
 footer {
@@ -171,9 +171,6 @@ button:hover {
   background-color: orange;
 }
 
-.products-page-grid {
-}
-
 .products-grid {
   grid-template-rows: 50px auto;
   margin: 0px 50px;
@@ -186,6 +183,7 @@ button:hover {
 }
 
 .categories {
+  margin-top: 50px;
   margin-left: 50px;
   margin-bottom: 50px;
   font-size: 15px;
@@ -473,13 +471,6 @@ button:hover {
 #welcome-msg {
   text-shadow: 2px 2px 10px black;
   font-size: 50px;
-}
-
-#placeholder-logo {
-  border: 2px solid black;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
 }
 
 #brand-name-grid {

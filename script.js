@@ -1,5 +1,49 @@
 // script.js
+const cartItems = []
+
+class CartItem {
+  constructor(size, color, quantity) {
+    this.size = size
+    this.color = color
+    this.quantity = quantity
+  }
+}
+
+function addItemToCart() {
+  let sizeSel = document.getElementsByName("size")
+  var size = ""
+  for (let i=0; i<4; i++) {
+    if (sizeSel[i].checked) {
+      size = sizeSel[i].value
+    }
+  }
+  let colorSel = document.getElementsByName("color")
+  var color = ""
+  for (let i=0; i<4; i++) {
+    if (colorSel[i].checked) {
+      color = colorSel[i].value
+    }
+  }
+  let quantSel = document.getElementById("quantity")
+  var quantity = quantSel.options[quantSel.selectedIndex].value
+  console.log("Size: " + size + ", Color: " + color + ", Quantity: " + quantity)
+  const cartItem = new CartItem(size, color, quantity)
+  cartItems.push(cartItem)
+}
+
+function displayCartPopUp() {
+
+}
+
+function displayCartNotification() {
+  
+}
+
+function displayAddToCartAfter() {
+  displayCartPopUp()
+  displayCartNotification()
+}
 
 function addToCart() {
-  console.log("hello")
+  addItemToCart()
 }

@@ -95,32 +95,32 @@
             <label class="detail-label">Size:</label>
             <label class="selected-label">Select a size</label>
           </div>
-          <div id="size-selection" class="selection-option-flex flex-container">
+          <form id="size-selection" class="selection-option-flex flex-container">
             <label class="container">
-              <input type="radio" checked="checked" name="size">
+              <input type="radio" checked="checked" name="size" value="tiny">
               <span class="checkmark">
                 <div class="centered" style="text-align: center;">T</div>
               </span>
             </label>
             <label class="container">
-              <input type="radio" name="size">
+              <input type="radio" name="size" value="small">
               <span class="checkmark">
                 <div class="centered" style="text-align: center;">S</div>
               </span>
             </label>
             <label class="container">
-              <input type="radio" name="size">
+              <input type="radio" name="size" value="medium">
               <span class="checkmark">
                 <div class="centered" style="text-align: center;">M</div>
               </span>
             </label>
             <label class="container">
-              <input type="radio" name="size">
+              <input type="radio" name="size" value="large">
               <span class="checkmark">
                 <div class="centered" style="text-align: center;">L</div>
               </span>
             </label>
-          </div>
+          </form>
 
         </div>
 
@@ -129,40 +129,40 @@
             <label class="detail-label">Color:</label>
             <label class="selected-label">Select a color</label>
           </div>
-          <div id="color-selection" class="selection-option-flex flex-container">
+          <form id="color-selection" class="selection-option-flex flex-container">
             <label class="container">
-              <input type="radio" checked="checked" name="color">
+              <input type="radio" checked="checked" name="color" value="strawberry">
               <span class="checkmark" style="background-color: red"></span>
             </label>
             <label class="container">
-              <input type="radio" name="color">
+              <input type="radio" name="color" value="blackberry">
               <span class="checkmark" style="background-color: purple"></span>
             </label>
             <label class="container">
-              <input type="radio" name="color">
+              <input type="radio" name="color" value="crazyberry">
               <span class="checkmark" style="background-color: magenta;"></span>
             </label>
             <label class="container">
-              <input type="radio" name="color">
+              <input type="radio" name="color" value="fire-orange">
               <span class="checkmark" style="background-color: orange"></span>
             </label>
-          </div>
+          </form>
 
         </div>
 
         <div class="selection-grid grid-container">
           <label class="detail-label">Quantity:</label>
-          <select>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
+          <select id="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
           </select>
 
         </div>

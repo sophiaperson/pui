@@ -32,7 +32,9 @@ function addItemToCart() {
 }
 
 function displayCartPopUp() {
-
+  let popup = document.getElementById("cart-popup")
+  popup.style.visibility = "visible"
+  console.log("popup")
 }
 
 function displayCartNotification() {
@@ -42,13 +44,9 @@ function displayCartNotification() {
   notification.style.visibility = "visible"
 }
 
-function displayAddToCartAfter() {
-  displayCartPopUp()
-  displayCartNotification()
-}
-
 function addToCart() {
   addItemToCart()
+  displayCartPopUp()
   displayCartNotification()
 }
 

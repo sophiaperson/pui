@@ -82,6 +82,7 @@ button {
   width: max-content;
   height: max-content;
   padding: 10px 50px;
+  cursor: pointer;
 }
 
 button:hover {
@@ -420,11 +421,31 @@ button:hover {
   color: gray;
 }
 
+
+/* The Close Button */
+.close {
+  visibility: hidden;
+  position: relative;
+  display: inline-block;
+  color: #aaa;
+  top: 0px;
+  left: 180px;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* Popup container - can be anything you want */
 .popup {
   position: fixed;
   display: inline-block;
-  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -437,30 +458,21 @@ button:hover {
 .popup .popuptext {
   display: inline-block;
   visibility: hidden;
-  width: 160px;
-  background-color: #555;
+  background-color: green;
   color: #fff;
-  text-align: center;
+  text-align: left;
   border-radius: 6px;
-  padding: 8px 0;
   position: absolute;
-  z-index: 1;
   top: 0px;
   left: 0px;
+  height: max-content;
+  width: 200px;
 }
 
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 75%;
-  width: 0px;
-  height: 0px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 10px solid #555;
+.popup .popuptext .popup-body {
+  padding: 20px 20px;
 }
+
 
 /* Toggle this class - hide and show the popup */
 .popup .show {
@@ -479,6 +491,7 @@ button:hover {
   from {opacity: 0;}
   to {opacity:1 ;}
 }
+
 
 #home-page-grid {
   grid-template-rows: 500px auto;
@@ -591,4 +604,12 @@ button:hover {
 #cart-notification:hover {
   color: white;
   background-color: green;
+}
+
+#product-detail-title {
+
+}
+
+#product-detail-price {
+
 }

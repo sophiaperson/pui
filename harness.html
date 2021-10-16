@@ -87,8 +87,8 @@
 
       <div class="product-detail-info-grid grid-container">
         <div> 
-          <h2 class="product-detail-title">Harness</h2>
-          <h3 class="product-detail-price">$50</h3>
+          <h2 id="product-detail-title">Harness</h2>
+          <h3 id="product-detail-price">$50</h3>
         </div>
 
         <div id="size-selection-grid" class="selection-grid grid-container">
@@ -181,7 +181,10 @@
     </div>
 
     <div class="popup" style="visibility: hidden;">
-      <span class="popuptext" id="cart-popup">A Simple Popup!</span>
+      <span class="close" onclick="closePopup()">&times;</span>
+      <span class="popuptext" id="cart-popup">
+        <div class="popup-body" id="cart-popup-body"></div> 
+      </span>
     </div>
 
     <footer>

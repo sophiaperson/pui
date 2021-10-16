@@ -2,10 +2,12 @@
 const cartItems = []
 
 class CartItem {
-  constructor(size, color, quantity) {
+  constructor(size, color, quantity, name, price) {
     this.size = size
     this.color = color
-    this.quantity = quantity
+    this.quantity = Number(quantity)
+    this.name = name
+    this.price = Number(price)
   }
 }
 
@@ -26,15 +28,27 @@ function addItemToCart() {
   }
   let quantSel = document.getElementById("quantity")
   var quantity = quantSel.options[quantSel.selectedIndex].value
-  console.log("Size: " + size + ", Color: " + color + ", Quantity: " + quantity)
-  const cartItem = new CartItem(size, color, quantity)
+  
+  let name = document.getElementById("product-detail-title").innerHTML
+  let price = document.getElementById("product-detail-price").innerHTML
+  const cartItem = new CartItem(size, color, quantity, name, price)
   cartItems.push(cartItem)
+
+  console.log("Size: " + size + ", Color: " + color + ", Quantity: " + quantity + ", Name: " + name + ", Price: " + price)
+  return cartItem;
 }
 
-function displayCartPopUp() {
+function displayCartPopUp(cartItem) {
   let popup = document.getElementById("cart-popup")
   popup.style.visibility = "visible"
-  console.log("popup")
+  let size = capitalizeFirstLetter(cartItem.size)
+  let color = capitalizeFirstLetter(cartItem.color)
+  let quantity = cartItem.quantity
+  let name = cartItem.name
+  let price = cartItem.price 
+  message = ""
+  message = size + " " + color + " " + name + " x" + quantity.toString() + " added to cart!"
+  document.getElementById("cart-popup-body").innerHTML = message
 }
 
 function displayCartNotification() {
@@ -42,11 +56,12 @@ function displayCartNotification() {
   let notification = document.getElementById("cart-notification")
   notification.innerHTML = numItems.toString()
   notification.style.visibility = "visible"
+  document.getElementsByClassName('close')[0].style.visibility = "visible"
 }
 
 function addToCart() {
-  addItemToCart()
-  displayCartPopUp()
+  let cartItem = addItemToCart()
+  displayCartPopUp(cartItem)
   displayCartNotification()
 }
 
@@ -68,7 +83,7 @@ function mouseOutSize() {
       size = sizeSel[i].value
     }
   }
-  size = size.charAt(0).toUpperCase() + size.slice(1)
+  size = capitalizeFirstLetter(size)
   document.getElementById("selected-size").innerHTML = size
 }
 
@@ -82,4 +97,14 @@ function mouseOutColor() {
   }
   color = color.charAt(0).toUpperCase() + color.slice(1)
   document.getElementById("selected-color").innerHTML = color
+}
+
+function closePopup() {
+  document.getElementById("cart-popup").style.visibility = "hidden"
+  document.getElementsByClassName("close")[0].style.visibility = "hidden"
+}
+
+function capitalizeFirstLetter(str) {
+  str = str.charAt(0).toUpperCase() + str.slice(1)
+  return str
 }

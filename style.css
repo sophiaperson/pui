@@ -418,6 +418,24 @@ button:hover {
   color: gray;
 }
 
+.cart-notification {
+  background-color: green;
+  color: white;
+  width: 10px;
+  height: 10px;
+  font-size: 7px;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid green;
+  border-radius: 50%;
+  position: relative;
+}
+
+.cart-notification:hover {
+  color: white;
+  background-color: green;
+}
+
 #home-page-grid {
   grid-template-rows: 500px auto;
 }
@@ -502,8 +520,11 @@ button:hover {
 
 #cart-icon:hover {
   filter: invert(97%) sepia(6%) saturate(3%) hue-rotate(314deg) brightness(92%) contrast(91%);
+  display: inline-block;
+  position: reltive;
 }
 
-.active #cart-icon{
+.active #cart-icon {
   filter: invert(33%) sepia(64%) saturate(1491%) hue-rotate(122deg) brightness(100%) contrast(102%);
 }
+
